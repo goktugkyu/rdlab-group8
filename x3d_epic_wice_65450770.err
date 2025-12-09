@@ -1,0 +1,73 @@
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xedd54c0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xd51f200] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x109d1200] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xd6df480] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x10427700] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xd5207c0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xd517680] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xd51f200] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xd5481c0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xd5264c0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xd51edc0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xd54fd00] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xd51edc0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xd51edc0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xd51f200] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xd519b40] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xd51f200] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xd51edc0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xedcab80] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xd51f200] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xd51f200] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x135685c0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x11e7d3c0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xe522900] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xd5504c0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xd51edc0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xd51edc0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x135685c0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x135685c0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xe0d0800] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xe0d0800] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xf182f40] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x135685c0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x135685c0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xd520b80] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xd520b80] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xd51edc0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x135685c0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xd517080] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xd51edc0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xd521480] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x10a0e0c0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xe202d80] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xd57bac0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xd51f140] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xd54e540] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xd57bac0] Referenced QT chapter track not found
+Traceback (most recent call last):
+  File "/vsc-hard-mounts/leuven-data/380/vsc38053/RD_Project/mmaction2/tools/train.py", line 143, in <module>
+  File "/vsc-hard-mounts/leuven-data/380/vsc38053/RD_Project/mmaction2/tools/train.py", line 139, in main
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction2/lib/python3.10/site-packages/mmengine/runner/runner.py", line 1777, in train
+    model = self.train_loop.run()  # type: ignore
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction2/lib/python3.10/site-packages/mmengine/runner/loops.py", line 98, in run
+    self.run_epoch()
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction2/lib/python3.10/site-packages/mmengine/runner/loops.py", line 115, in run_epoch
+    self.run_iter(idx, data_batch)
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction2/lib/python3.10/site-packages/mmengine/runner/loops.py", line 134, in run_iter
+    self.runner.call_hook(
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction2/lib/python3.10/site-packages/mmengine/runner/runner.py", line 1839, in call_hook
+    getattr(hook, fn_name)(self, **kwargs)
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction2/lib/python3.10/site-packages/mmengine/hooks/logger_hook.py", line 199, in after_train_iter
+    runner.visualizer.add_scalars(
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction2/lib/python3.10/site-packages/mmengine/dist/utils.py", line 427, in wrapper
+    return func(*args, **kwargs)
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction2/lib/python3.10/site-packages/mmengine/visualization/visualizer.py", line 1132, in add_scalars
+    vis_backend.add_scalars(scalar_dict, step, file_path, **kwargs)
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction2/lib/python3.10/site-packages/mmengine/visualization/vis_backend.py", line 60, in wrapper
+    return old_func(obj, *args, **kwargs)
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction2/lib/python3.10/site-packages/mmengine/visualization/vis_backend.py", line 312, in add_scalars
+    self._dump(scalar_dict, new_save_file_path, 'json')
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction2/lib/python3.10/site-packages/mmengine/visualization/vis_backend.py", line 324, in _dump
+    with open(file_path, 'a+') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/vsc-hard-mounts/leuven-data/380/vsc38053/RD_Project/mmaction2/work_dirs/x3d_s_epic100_13x6x1_rgb/20251116_163932/vis_data/20251116_163932.json'

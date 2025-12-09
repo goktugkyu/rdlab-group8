@@ -1,0 +1,47 @@
+/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/torch/nn/modules/conv.py:605: UserWarning: Applied workaround for CuDNN issue, install nvrtc.so (Triggered internally at ../aten/src/ATen/native/cudnn/Conv_v8.cpp:80.)
+  return F.conv3d(
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x837dd00] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x86e69c0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x86e71c0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x89e2740] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x89e4c40] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x1184e780] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x89e1380] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xb264900] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xd47f700] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xc27dac0] Referenced QT chapter track not found
+Traceback (most recent call last):
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1132, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/queue.py", line 180, in get
+    self.not_empty.wait(remaining)
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/threading.py", line 324, in wait
+    gotit = waiter.acquire(True, timeout)
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 2696019) is killed by signal: Killed. 
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vsc-hard-mounts/leuven-data/380/vsc38053/RD_Project/mmaction2/tools/train.py", line 143, in <module>
+    main()
+  File "/vsc-hard-mounts/leuven-data/380/vsc38053/RD_Project/mmaction2/tools/train.py", line 139, in main
+    runner.train()
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/mmengine/runner/runner.py", line 1777, in train
+    model = self.train_loop.run()  # type: ignore
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/mmengine/runner/loops.py", line 98, in run
+    self.run_epoch()
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/mmengine/runner/loops.py", line 114, in run_epoch
+    for idx, data_batch in enumerate(self.dataloader):
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+    data = self._next_data()
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1328, in _next_data
+    idx, data = self._get_data()
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1284, in _get_data
+    success, data = self._try_get_data()
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1145, in _try_get_data
+    raise RuntimeError(f'DataLoader worker (pid(s) {pids_str}) exited unexpectedly') from e
+RuntimeError: DataLoader worker (pid(s) 2696019) exited unexpectedly
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x84541c0] Referenced QT chapter track not found
+slurmstepd: error: Detected 1 oom_kill event in StepId=65554626.batch. Some of the step tasks have been OOM Killed.

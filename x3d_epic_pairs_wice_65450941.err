@@ -1,0 +1,62 @@
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.1.2 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "/vsc-hard-mounts/leuven-data/380/vsc38053/RD_Project/mmaction2/tools/train.py", line 7, in <module>
+    from mmengine.runner import Runner
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/mmengine/runner/__init__.py", line 2, in <module>
+    from ._flexible_runner import FlexibleRunner
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/mmengine/runner/_flexible_runner.py", line 10, in <module>
+    import torch.nn as nn
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/torch/__init__.py", line 1382, in <module>
+    from .functional import *  # noqa: F403
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/torch/functional.py", line 7, in <module>
+    import torch.nn.functional as F
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/torch/nn/__init__.py", line 1, in <module>
+    from .modules import *  # noqa: F403
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/torch/nn/modules/__init__.py", line 35, in <module>
+    from .transformer import TransformerEncoder, TransformerDecoder, \
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/torch/nn/modules/transformer.py", line 20, in <module>
+    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)
+  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+Traceback (most recent call last):
+  File "/vsc-hard-mounts/leuven-data/380/vsc38053/RD_Project/mmaction2/tools/train.py", line 143, in <module>
+    main()
+  File "/vsc-hard-mounts/leuven-data/380/vsc38053/RD_Project/mmaction2/tools/train.py", line 139, in main
+    runner.train()
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/mmengine/runner/runner.py", line 1728, in train
+    self._train_loop = self.build_train_loop(
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/mmengine/runner/runner.py", line 1520, in build_train_loop
+    loop = LOOPS.build(
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/mmengine/registry/registry.py", line 570, in build
+    return self.build_func(cfg, *args, **kwargs, registry=self)
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/mmengine/registry/build_functions.py", line 121, in build_from_cfg
+    obj = obj_cls(**args)  # type: ignore
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/mmengine/runner/loops.py", line 46, in __init__
+    super().__init__(runner, dataloader)
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/mmengine/runner/base_loop.py", line 26, in __init__
+    self.dataloader = runner.build_dataloader(
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/mmengine/runner/runner.py", line 1370, in build_dataloader
+    dataset = DATASETS.build(dataset_cfg)
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/mmengine/registry/registry.py", line 570, in build
+    return self.build_func(cfg, *args, **kwargs, registry=self)
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/mmengine/registry/build_functions.py", line 121, in build_from_cfg
+    obj = obj_cls(**args)  # type: ignore
+  File "/vsc-hard-mounts/leuven-data/380/vsc38053/RD_Project/mmaction2/mmaction/datasets/video_dataset.py", line 67, in __init__
+    super().__init__(
+  File "/vsc-hard-mounts/leuven-data/380/vsc38053/RD_Project/mmaction2/mmaction/datasets/base.py", line 48, in __init__
+    super().__init__(
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/mmengine/dataset/base_dataset.py", line 247, in __init__
+    self.full_init()
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/mmengine/dataset/base_dataset.py", line 298, in full_init
+    self.data_list = self.load_data_list()
+  File "/vsc-hard-mounts/leuven-data/380/vsc38053/RD_Project/mmaction2/mmaction/datasets/video_dataset.py", line 93, in load_data_list
+    filename, label = line_split
+ValueError: too many values to unpack (expected 2)

@@ -1,0 +1,32 @@
+#!/bin/bash -l
+
+#SBATCH --account=lp_edu_rdlab
+#SBATCH --clusters=wice
+#SBATCH --partition=gpu_a100
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=40G
+#SBATCH --gpus-per-node=1
+#SBATCH --time=06:00:00
+
+#SBATCH --job-name=x3d_epic_pairs_genius
+#SBATCH --output=x3d_epic_pairs_genius_%j.out
+#SBATCH --error=x3d_epic_pairs_genius_%j.err
+
+export OMP_NUM_THREADS=1
+export MKL_NUM_THREADS=1
+
+# Load GPU env on genius (adjust if your docs say something slightly different)
+module load cluster/genius
+
+source ~/.bashrc
+conda activate mmaction_clean
+
+cd /data/leuven/380/vsc38053/RD_Project/mmaction2
+
+# make sure epic_segment_dataset.py is on PYTHONPATH
+export PYTHONPATH=/data/leuven/380/vsc38053/RD_Project:$PYTHONPATH
+
+python tools/train.py \
+  configs/recognition/x3d/x3d_s_epic_rgb_segments.py

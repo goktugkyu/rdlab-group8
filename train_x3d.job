@@ -1,0 +1,23 @@
+#!/bin/bash
+#SBATCH --job-name=x3d_epic
+#SBATCH --output=x3d_epic_%j.out
+#SBATCH --error=x3d_epic_%j.err
+#SBATCH --time=12:00:00
+#SBATCH --partition=gpu_v100
+#SBATCH --gres=gpu:1
+#SBATCH --mem=32G
+#SBATCH --nodes=1
+#SBATCH --cpus-per-task=4
+#SBATCH --account=lp_edu_rdlab
+#SBATCH --qos=lp_edu_rdlab
+
+module purge
+module load CUDA/12.1.1
+module load GCC/11.3.0
+
+source ~/.bashrc
+conda activate mmaction2
+
+cd /data/leuven/380/vsc38053/RD_Project/mmaction2
+
+python tools/train.py configs/recognition/x3d/x3d_s_epic100_13x6x1_rgb.py

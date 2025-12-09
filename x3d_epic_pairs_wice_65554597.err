@@ -1,0 +1,34 @@
+Traceback (most recent call last):
+  File "/vsc-hard-mounts/leuven-data/380/vsc38053/RD_Project/mmaction2/tools/train.py", line 143, in <module>
+    main()
+  File "/vsc-hard-mounts/leuven-data/380/vsc38053/RD_Project/mmaction2/tools/train.py", line 139, in main
+    runner.train()
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/mmengine/runner/runner.py", line 1728, in train
+    self._train_loop = self.build_train_loop(
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/mmengine/runner/runner.py", line 1520, in build_train_loop
+    loop = LOOPS.build(
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/mmengine/registry/registry.py", line 570, in build
+    return self.build_func(cfg, *args, **kwargs, registry=self)
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/mmengine/registry/build_functions.py", line 121, in build_from_cfg
+    obj = obj_cls(**args)  # type: ignore
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/mmengine/runner/loops.py", line 46, in __init__
+    super().__init__(runner, dataloader)
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/mmengine/runner/base_loop.py", line 26, in __init__
+    self.dataloader = runner.build_dataloader(
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/mmengine/runner/runner.py", line 1370, in build_dataloader
+    dataset = DATASETS.build(dataset_cfg)
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/mmengine/registry/registry.py", line 570, in build
+    return self.build_func(cfg, *args, **kwargs, registry=self)
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/mmengine/registry/build_functions.py", line 121, in build_from_cfg
+    obj = obj_cls(**args)  # type: ignore
+  File "/data/leuven/380/vsc38053/RD_Project/epic_segment_dataset.py", line 29, in __init__
+    super().__init__(ann_file=ann_file, **kwargs)
+  File "/vsc-hard-mounts/leuven-data/380/vsc38053/RD_Project/mmaction2/mmaction/datasets/base.py", line 48, in __init__
+    super().__init__(
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/mmengine/dataset/base_dataset.py", line 247, in __init__
+    self.full_init()
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/mmengine/dataset/base_dataset.py", line 298, in full_init
+    self.data_list = self.load_data_list()
+  File "/data/leuven/380/vsc38053/RD_Project/epic_segment_dataset.py", line 36, in load_data_list
+    with open(self.ann_file, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '../../../../epic_rgb_train_segments_train_bytesio_clean.txt'

@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/vsc-hard-mounts/leuven-data/380/vsc38053/RD_Project/mmaction2/tools/train.py", line 143, in <module>
+    main()
+  File "/vsc-hard-mounts/leuven-data/380/vsc38053/RD_Project/mmaction2/tools/train.py", line 132, in main
+    runner = Runner.from_cfg(cfg)
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/mmengine/runner/runner.py", line 462, in from_cfg
+    runner = cls(
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/mmengine/runner/runner.py", line 342, in __init__
+    raise ValueError(
+ValueError: val_dataloader, val_cfg, and val_evaluator should be either all None or not None, but got val_dataloader=None, val_cfg=None, val_evaluator={'type': 'AccMetric'}

@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/vsc-hard-mounts/leuven-data/380/vsc38053/RD_Project/mmaction2/tools/train.py", line 143, in <module>
+    main()
+  File "/vsc-hard-mounts/leuven-data/380/vsc38053/RD_Project/mmaction2/tools/train.py", line 124, in main
+    cfg = Config.fromfile(args.config)
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/mmengine/config/config.py", line 461, in fromfile
+    cfg_dict, cfg_text, env_variables = Config._file2dict(
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/mmengine/config/config.py", line 947, in _file2dict
+    raise e
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/mmengine/config/config.py", line 925, in _file2dict
+    eval(codeobj, global_locals_var, global_locals_var)
+  File "/vsc-hard-mounts/leuven-data/380/vsc38053/RD_Project/mmaction2/configs/recognition/x3d/x3d_s_epic_rgb_segments.py", line 235, in <module>
+    data_prefix=dict(video=data_root_val),
+NameError: name 'data_root_val' is not defined. Did you mean: 'data_root'?

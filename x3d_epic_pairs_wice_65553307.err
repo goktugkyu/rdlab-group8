@@ -1,0 +1,47 @@
+Traceback (most recent call last):
+  File "/vsc-hard-mounts/leuven-data/380/vsc38053/RD_Project/mmaction2/tools/train.py", line 143, in <module>
+    main()
+  File "/vsc-hard-mounts/leuven-data/380/vsc38053/RD_Project/mmaction2/tools/train.py", line 139, in main
+    runner.train()
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/mmengine/runner/runner.py", line 1777, in train
+    model = self.train_loop.run()  # type: ignore
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/mmengine/runner/loops.py", line 98, in run
+    self.run_epoch()
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/mmengine/runner/loops.py", line 114, in run_epoch
+    for idx, data_batch in enumerate(self.dataloader):
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+    data = self._next_data()
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1345, in _next_data
+    return self._process_data(data)
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1371, in _process_data
+    data.reraise()
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/torch/_utils.py", line 694, in reraise
+    raise exception
+decord._ffi.base.DECORDError: Caught DECORDError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 308, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 51, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 51, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/mmengine/dataset/base_dataset.py", line 410, in __getitem__
+    data = self.prepare_data(idx)
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/mmengine/dataset/base_dataset.py", line 793, in prepare_data
+    return self.pipeline(data_info)
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/mmengine/dataset/base_dataset.py", line 60, in __call__
+    data = t(data)
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/mmcv/transforms/base.py", line 12, in __call__
+    return self.transform(results)
+  File "/vsc-hard-mounts/leuven-data/380/vsc38053/RD_Project/mmaction2/mmaction/datasets/transforms/loading.py", line 1155, in transform
+    container = self._get_video_reader(results['filename'])
+  File "/vsc-hard-mounts/leuven-data/380/vsc38053/RD_Project/mmaction2/mmaction/datasets/transforms/loading.py", line 1143, in _get_video_reader
+    container = decord.VideoReader(file_obj, num_threads=self.num_threads)
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/decord/video_reader.py", line 51, in __init__
+    self._handle = _CAPI_VideoReaderGetVideoReader(
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/decord/_ffi/_ctypes/function.py", line 173, in __call__
+    check_call(_LIB.DECORDFuncCall(
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/decord/_ffi/base.py", line 78, in check_call
+    raise DECORDError(err_str)
+decord._ffi.base.DECORDError: [19:27:34] /github/workspace/src/video/video_reader.cc:151: Check failed: st_nb >= 0 (-1381258232 vs. 0) ERROR cannot find video stream with wanted index: -1
+

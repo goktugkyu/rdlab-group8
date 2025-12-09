@@ -1,0 +1,45 @@
+Traceback (most recent call last):
+  File "/vsc-hard-mounts/leuven-data/380/vsc38053/RD_Project/mmaction2/tools/train.py", line 143, in <module>
+    main()
+  File "/vsc-hard-mounts/leuven-data/380/vsc38053/RD_Project/mmaction2/tools/train.py", line 139, in main
+    runner.train()
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction2/lib/python3.10/site-packages/mmengine/runner/runner.py", line 1777, in train
+    model = self.train_loop.run()  # type: ignore
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction2/lib/python3.10/site-packages/mmengine/runner/loops.py", line 98, in run
+    self.run_epoch()
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction2/lib/python3.10/site-packages/mmengine/runner/loops.py", line 114, in run_epoch
+    for idx, data_batch in enumerate(self.dataloader):
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction2/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 732, in __next__
+    data = self._next_data()
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction2/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1506, in _next_data
+    return self._process_data(data, worker_id)
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction2/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1541, in _process_data
+    data.reraise()
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction2/lib/python3.10/site-packages/torch/_utils.py", line 769, in reraise
+    raise exception
+FileNotFoundError: Caught FileNotFoundError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction2/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 349, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction2/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction2/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction2/lib/python3.10/site-packages/mmengine/dataset/base_dataset.py", line 410, in __getitem__
+    data = self.prepare_data(idx)
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction2/lib/python3.10/site-packages/mmengine/dataset/base_dataset.py", line 793, in prepare_data
+    return self.pipeline(data_info)
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction2/lib/python3.10/site-packages/mmengine/dataset/base_dataset.py", line 60, in __call__
+    data = t(data)
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction2/lib/python3.10/site-packages/mmcv/transforms/base.py", line 12, in __call__
+    return self.transform(results)
+  File "/vsc-hard-mounts/leuven-data/380/vsc38053/RD_Project/mmaction2/mmaction/datasets/transforms/loading.py", line 1155, in transform
+    container = self._get_video_reader(results['filename'])
+  File "/vsc-hard-mounts/leuven-data/380/vsc38053/RD_Project/mmaction2/mmaction/datasets/transforms/loading.py", line 1142, in _get_video_reader
+    file_obj = io.BytesIO(self.file_client.get(filename))
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction2/lib/python3.10/site-packages/mmengine/fileio/file_client.py", line 301, in get
+    return self.client.get(filepath)
+  File "/data/leuven/380/vsc38053/miniconda3/envs/mmaction2/lib/python3.10/site-packages/mmengine/fileio/backends/local_backend.py", line 33, in get
+    with open(filepath, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/data/leuven/380/vsc38053/RD_Project/epic-kitchens-data/videos_640x360/P07/P07_117.MP4'
+

@@ -1,0 +1,4 @@
+/data/leuven/380/vsc38053/miniconda3/envs/mmaction_clean/lib/python3.10/site-packages/torch/nn/modules/conv.py:605: UserWarning: Applied workaround for CuDNN issue, install nvrtc.so (Triggered internally at ../aten/src/ATen/native/cudnn/Conv_v8.cpp:80.)
+  return F.conv3d(
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xa267740] Referenced QT chapter track not found
+slurmstepd: error: *** JOB 65554610 ON k28i14 CANCELLED AT 2025-12-08T23:50:12 ***

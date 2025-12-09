@@ -1,0 +1,13 @@
+SLURM_JOB_ID: 65553262
+SLURM_JOB_USER: vsc38053
+SLURM_JOB_ACCOUNT: lp_edu_rdlab
+SLURM_JOB_NAME: x3d_epic_pairs_wice
+SLURM_CLUSTER_NAME: wice
+SLURM_JOB_PARTITION: interactive
+SLURM_NNODES: 1
+SLURM_NODELIST: k28i14
+SLURM_JOB_CPUS_PER_NODE: 4
+SLURM_JOB_GPUS: 2
+Date: Mon Dec  8 19:09:11 CET 2025
+Walltime: 00-12:00:00
+========================================================================
